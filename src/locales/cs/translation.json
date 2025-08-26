@@ -1,0 +1,135 @@
+{
+  "appTitle": "Kalkulačka úspor na důchod",
+  "description": "V reálných hodnotách (dnešní peníze). Zahrnuje poplatky, daně z výnosů a daně z výběrů.",
+  "wisdom": "Vyrobeno s ❤️ pro nadšence osobních financí. Nejedná se o finanční poradenství.",
+  "calculateMC": "Vypočítat Monte Carlo",
+  "calculating": "Probíhá výpočet...",
+  "inputsChangedWarning": "Vstupy se změnily. Klikněte na {{button}} pro aktualizaci výsledků.",
+  "month": "měsíc",
+  "months": "měsíce",
+  "percentage": "%",
+  "currency": "{{amount, currency}}",
+  "section": {
+    "basics": "Základní informace",
+    "economyAndReturns": "Ekonomika & výnosy",
+    "monteCarloSettings": "Nastavení Monte Carlo",
+    "feesAndNeeds": "Poplatky, daně a potřeby"
+  },
+  "info": {
+    "aboutTitle": "O této kalkulačce",
+    "aboutText1": "Zadejte své údaje – věk, věk odchodu do důchodu, úspornou kapacitu a předpoklady jako inflace, poplatky a daně. Kalkulačka zobrazuje výsledky v dnešních cenách (reálné hodnoty), aby bylo možné smysluplně porovnávat scénáře.",
+    "aboutText2": "Zvolte Deterministický režim pro projekci s pevnou sazbou nebo Monte Carlo, pokud chcete vidět, jak tržní výkyvy ovlivní váš plán. Dva důchodové modely umožňují použít bezpečnou výběrovou sazbu nebo plánovat pevný důchodový horizont (amortizace).",
+    "interpretationTitle": "Jak číst výsledky",
+    "realAnnualReturn": "Reálný roční výnos",
+    "realAnnualReturnDesc": "Efektivní roční růst po započtení inflace, poplatků a daní.",
+    "targetCapital": "Cílový kapitál",
+    "targetCapitalDesc": "Zobrazuje jak dnešní kupní sílu, tak budoucí částky, které budete potřebovat při odchodu do důchodu.",
+    "requiredSaving": "Potřebné měsíční spoření",
+    "requiredSavingDesc": "Měsíční částka potřebná k dosažení cíle.",
+    "successProbabilityDesc": "V režimu Monte Carlo znamená „Pravděpodobnost úspěchu“ šanci, že vám úspory vydrží po celý plánovaný důchodový horizont, a to i při tržních výkyvech.",
+    "quickTipsTitle": "Rychlé tipy",
+    "quickTip1": "Používejte realistické předpoklady: inflace 2–3 %, akciové výnosy 5–8 %, dluhopisové 2–4 %.",
+    "quickTip2": "Vstupy revidujte jednou ročně nebo po výrazných pohybech trhu.",
+    "quickTip3": "Počítejte se všemi náklady: investiční poplatky obvykle 0,1–2 %, daně závisí na typu účtu.",
+    "quickTip4": "Plánujte dlouhověkost: uvažujte horizont důchodu 20+ let.",
+    "disclaimerTitle": "Upozornění",
+    "disclaimerText": "Tento nástroj slouží k edukaci a nepředstavuje finanční poradenství. Tržní výnosy jsou nejisté a daňová pravidla se liší podle země. Berte to jako vodítko, ne jako garanci."
+  },
+  "labels": {
+    "currentAge": "Aktuální věk",
+    "retirementAge": "Věk odchodu do důchodu",
+    "calculationMode": "Režim výpočtu",
+    "retirementModel": "Model odchodu do důchodu",
+    "retirementHorizonYears": "Horizont důchodu (roky)",
+    "contributeAtEnd": "Přispívat na konci měsíce",
+    "currentAssets": "Aktuální aktiva (dnes)",
+    "annualInflation": "Roční inflace",
+    "nominalAnnualReturn": "Nom. roční výnos (hrubý)",
+    "optimisticReturn": "Optimistický výnos",
+    "optimisticInflation": "Optimistická inflace",
+    "pessimisticReturn": "Pesimistický výnos",
+    "pessimisticInflation": "Pesimistická inflace",
+    "realAnnualVolatility": "Reálná roční volatilita (σ)",
+    "trials": "Počet pokusů",
+    "targetSuccessProbability": "Cílová pravděpodobnost úspěchu",
+    "targetMonthlyWithdrawalToday": "Cílový čistý měsíční výběr (dnes)",
+    "maxAnnualWithdrawalRate": "Maximální roční míra výběru",
+    "annualFee": "Roční poplatek (TER/platforma)",
+    "taxRateOnGains": "Daň z výnosů",
+    "taxRateOnWithdrawals": "Daň z výběrů"
+  },
+  "tooltips": {
+    "currentAge": "Váš aktuální věk v letech. Používá se k výpočtu let do důchodu.",
+    "retirementAge": "Věk, kdy plánujete odejít do důchodu; musí být vyšší než aktuální věk.",
+    "calcMode": "Deterministické režimy používají pevné sazby; Monte Carlo simuluje mnoho možných výsledků.",
+    "retireModel": "Bezpečná míra výběru vs. amortizace na omezený horizont.",
+    "retirementHorizonYears": "Odhadovaný počet let v důchodu; používá se ke kontrole vyčerpání prostředků.",
+    "contributeAtEnd": "Zda se příspěvky provádějí na konci nebo na začátku měsíce.",
+    "currentAssets": "Celková hodnota vašich úspor a investic na důchod.",
+    "annualInflation": "Očekávaná průměrná roční míra inflace.",
+    "nominalAnnualReturn": "Očekávaný roční výnos před inflací a poplatky.",
+    "optimisticReturn": "Dodatečný výnos pro optimistické scénáře.",
+    "optimisticInflation": "Změna inflace pro optimistické scénáře.",
+    "pessimisticReturn": "Snížení výnosu pro pesimistické scénáře.",
+    "pessimisticInflation": "Změna inflace pro pesimistické scénáře.",
+    "realAnnualVolatility": "Směrodatná odchylka reálných ročních výnosů.",
+    "volatility": "Směrodatná odchylka reálných ročních výnosů.",
+    "trials": "Počet Monte Carlo simulací.",
+    "successProbability": "Úroveň cílové pravděpodobnosti úspěchu.",
+    "targetMonthlyWithdrawalToday": "Kolik peněz chcete každý měsíc vybrat v důchodu, vyjádřeno v dnešní kupní síle. Toto je po zdanění a poplatcích.",
+    "maxAnnualWithdrawalRate": "Bezpečná míra výběru z portfolia. Známé pravidlo '4% rule' naznačuje, že 4 % je bezpečné pro 30letý důchod. Nižší míry jsou konzervativnější.",
+    "annualFee": "Celkové roční poplatky za vaše investice, včetně poměru nákladů, poplatků za platformu a správcovských poplatků. Indexové fondy obvykle účtují 0,1–0,5 %, zatímco aktivně spravované fondy mohou účtovat 1–2 %.",
+    "taxRateOnGains": "Daňová sazba na kapitálové zisky při prodeji investic. Například v USA jsou dlouhodobé kapitálové zisky typicky 0 %, 15 % nebo 20 % v závislosti na příjmu. Platí pro zdanitelné účty.",
+    "taxRateOnWithdrawals": "Daňová sazba na výběry z daňově zvýhodněných penzijních produktů (např. doplňkové penzijní spoření nebo životní pojištění). Výběry jsou zdaněny jako běžný příjem podle sazby v době výběru.",
+    "monteCarloSolver": "Pomocí bisekce hledáme minimální měsíční úsporu, která dosahuje cílové pravděpodobnosti úspěchu během určeného horizontu důchodu.",
+    "results": {
+      "deterministic": {
+        "realAnnualAccum": "Inflací očištěná roční míra růstu vašeho portfolia během akumulace.",
+        "yearsToRetirement": "Počet let zbývajících do důchodu.",
+        "targetCapitalReal": "Castka potřebna při odchodu do důchodu, vyjádřena v dnešní kupní síle.",
+        "targetCapitalNominal": "Castka potřebna při odchodu do důchodu v budoucích penězích (neočištěný o inflaci).",
+        "fvCurrentAssetsReal": "Budoucí hodnota vašich současných aktiv v dnešní kupní síle.",
+        "fvCurrentAssetsNominal": "Budoucí hodnota vašich současných aktiv v budoucích penězích (neočištěná o inflaci).",
+        "requiredFromContributionsReal": "Částka, kterou je třeba přispět navíc k dosažení cíle.",
+        "requiredMonthlyContributionReal": "Potřebná měsíční úspora k dosažení cíle."
+      }
+    }
+  },
+  "options": {
+    "calcMode": {
+      "deterministic": "Deterministický",
+      "monteCarlo": "Monte Carlo"
+    },
+    "retireModel": {
+      "withdrawalRate": "Míra výběru",
+      "amortization": "Amortizace (omezený horizont)"
+    }
+  },
+  "results": {
+    "deterministic": {
+      "scenarios": {
+        "BASE": "Základní",
+        "OPTIMISTIC": "Optimistický",
+        "PESSIMISTIC": "Pesimistický"
+      },
+      "realAnnualAccum": "Reálný roční (akumulace)",
+      "yearsToRetirement": "Počet let do důchodu",
+      "targetCapitalReal": "Cílový kapitál (dnešní peníze)",
+      "targetCapitalNominal": "Cílový kapitál (budoucí peníze)",
+      "fvCurrentAssetsReal": "Budoucí hodnota aktiv (reálná)",
+      "fvCurrentAssetsNominal": "Budoucí hodnota aktiv (nominální)",
+      "requiredFromContributionsReal": "Potřeba z příspěvků (reálná)",
+      "requiredMonthlyContributionReal": "Požadované měsíční úspory (reálné)"
+    },
+    "monteCarlo": {
+      "header": "Výsledek Monte Carlo",
+      "requiredMonthlyContributionReal": "Požadovaná měsíční úspora (reálná) /mo",
+      "successProbability": "Dosažená pravděpodobnost úspěchu",
+      "trials": "Pokusy",
+      "iterations": "Počet iterací řešiče",
+      "explanation": "Úspěch = zůstatek portfolia zůstává nad nulou po dobu vypočteného horizontu důchodu při požadovaném čistém výběru (před daní). Výnosy se simulují měsíčně z normálního rozdělení podle zadané reálné volatility.",
+      "noResult": "Výpočet dokončen, ale není k dispozici žádný výsledek.",
+      "notCalculated": "Klikněte na 'Vypočítat Monte Carlo', aby se simulace spustila s aktuálními parametry."
+    }
+  }
+}

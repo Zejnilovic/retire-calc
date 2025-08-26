@@ -1,0 +1,135 @@
+{
+  "appTitle": "Retirement Saving Calculator",
+  "description": "Real terms (today's money). Includes fees, taxes on gains, and taxes on withdrawals.",
+  "wisdom": "Made with ❤️ for personal finance nerds. No financial advice.",
+  "calculateMC": "Calculate Monte Carlo",
+  "calculating": "Calculating...",
+  "inputsChangedWarning": "Inputs changed. Click {{button}} to update results.",
+  "month": "month",
+  "months": "months",
+  "percentage": "%",
+  "currency": "{{amount, currency}}",
+  "section": {
+    "basics": "Basics",
+    "economyAndReturns": "Economy & Returns",
+    "monteCarloSettings": "Monte Carlo Settings",
+    "feesAndNeeds": "Fees, Taxes & Needs"
+  },
+  "info": {
+    "aboutTitle": "About this calculator",
+    "aboutText1": "Enter your details—age, retirement age, savings capacity, and assumptions like inflation, fees, and taxes. The calculator shows results in today's money (real terms) so you can compare outcomes meaningfully.",
+    "aboutText2": "Choose Deterministic for a fixed-return projection, or Monte Carlo to see how market volatility affects your plan. Two retirement models: withdrawal rate (e.g., 4% rule) or amortization over a fixed period.",
+    "interpretationTitle": "How to interpret results",
+    "realAnnualReturn": "Real annual return",
+    "realAnnualReturnDesc": "Your effective annual growth rate after inflation, fees, and taxes.",
+    "targetCapital": "Target capital",
+    "targetCapitalDesc": "Shows both today's purchasing power and future dollar amounts you'll need at retirement.",
+    "requiredSaving": "Required monthly saving",
+    "requiredSavingDesc": "Monthly amount you need to save to reach your goal.",
+    "successProbabilityDesc": "In Monte Carlo mode, “Success probability” is the chance your savings last through your retirement horizon, accounting for market ups and downs.",
+    "quickTipsTitle": "Quick tips",
+    "quickTip1": "Use realistic assumptions: inflation 2–3%, stock returns 5–8%, bond returns 2–4%.",
+    "quickTip2": "Review and update inputs annually or after major market moves.",
+    "quickTip3": "Account for all costs: investment fees typically 0.1–2%, taxes vary by account type.",
+    "quickTip4": "Plan for longevity: consider 20+ year retirement horizons.",
+    "disclaimerTitle": "Disclaimer",
+    "disclaimerText": "This is an educational tool, not financial advice. Market returns are uncertain, and tax rules differ by country. Use it as a guide, not a guarantee."
+  },
+  "labels": {
+    "currentAge": "Current age",
+    "retirementAge": "Retirement age",
+    "calculationMode": "Calculation mode",
+    "retirementModel": "Retirement model",
+    "retirementHorizonYears": "Retirement horizon (years)",
+    "contributeAtEnd": "Contribute at end of month",
+    "currentAssets": "Current assets (today)",
+    "annualInflation": "Annual inflation",
+    "nominalAnnualReturn": "Nominal annual return (gross)",
+    "optimisticReturn": "Optimistic return",
+    "optimisticInflation": "Optimistic inflation",
+    "pessimisticReturn": "Pessimistic return",
+    "pessimisticInflation": "Pessimistic inflation",
+    "realAnnualVolatility": "Real annual volatility (σ)",
+    "trials": "Trials",
+    "targetSuccessProbability": "Target success probability",
+    "targetMonthlyWithdrawalToday": "Target net monthly withdrawal (today)",
+    "maxAnnualWithdrawalRate": "Max annual withdrawal rate",
+    "annualFee": "Annual fee (TER/platform)",
+    "taxRateOnGains": "Tax on gains",
+    "taxRateOnWithdrawals": "Tax on withdrawals"
+  },
+  "tooltips": {
+    "currentAge": "Your current age in years. This calculates years to retirement.",
+    "retirementAge": "Age to retire; must exceed current age.",
+    "calcMode": "Deterministic uses fixed rates; Monte Carlo simulates many possible outcomes.",
+    "retireModel": "Safe withdrawal rate vs. amortization horizon.",
+    "retirementHorizonYears": "Years expected in retirement; used for depletion check.",
+    "contributeAtEnd": "Contributions at end vs. start of month.",
+    "currentAssets": "Total value of current retirement savings.",
+    "annualInflation": "Expected average annual inflation rate.",
+    "nominalAnnualReturn": "Expected pre-inflation investment return.",
+    "optimisticReturn": "Additional return for optimistic scenarios.",
+    "optimisticInflation": "Inflation change for optimistic cases.",
+    "pessimisticReturn": "Return reduction for pessimistic scenarios.",
+    "pessimisticInflation": "Inflation increase for pessimistic cases.",
+    "realAnnualVolatility": "Standard deviation of real annual returns.",
+    "volatility": "Standard deviation of real annual returns.",
+    "trials": "Number of Monte Carlo simulations.",
+    "successProbability": "Comfort level for success probability.",
+    "targetMonthlyWithdrawalToday": "How much money you want to withdraw each month in retirement, expressed in today's purchasing power. This is after taxes and fees.",
+    "maxAnnualWithdrawalRate": "The safe withdrawal rate from your portfolio. The famous '4% rule' suggests 4% is safe for a 30-year retirement. Lower rates are more conservative.",
+    "annualFee": "Total annual fees for your investments including expense ratios, platform fees, and management fees. Index funds typically charge 0.1-0.5%, while actively managed funds may charge 1-2%.",
+    "taxRateOnGains": "Tax rate on capital gains when you sell investments. In the US, long-term capital gains are typically 0%, 15%, or 20% depending on income. This applies to taxable accounts.",
+    "taxRateOnWithdrawals": "Tax rate on withdrawals from tax-deferred accounts like traditional 401(k) or IRA. These are taxed as ordinary income at your marginal tax rate in retirement.",
+    "monteCarloSolver": "We solve via bisection to find the minimum monthly savings that achieves your target success probability over the retirement horizon.",
+    "results": {
+      "deterministic": {
+        "realAnnualAccum": "Inflation-adjusted annual growth rate of your portfolio during accumulation.",
+        "yearsToRetirement": "Number of years remaining until you retire.",
+        "targetCapitalReal": "Lump sum required at retirement, expressed in today's purchasing power.",
+        "targetCapitalNominal": "Lump sum required at retirement in future money (not adjusted for inflation).",
+        "fvCurrentAssetsReal": "Future value of your current assets in today's purchasing power.",
+        "fvCurrentAssetsNominal": "Future value of your current assets in future money (not adjusted for inflation).",
+        "requiredFromContributionsReal": "Additional amount you must contribute to reach your target.",
+        "requiredMonthlyContributionReal": "Monthly savings required to meet your retirement goal."
+      }
+    }
+  },
+  "options": {
+    "calcMode": {
+      "deterministic": "Deterministic",
+      "monteCarlo": "Monte Carlo"
+    },
+    "retireModel": {
+      "withdrawalRate": "Withdrawal rate",
+      "amortization": "Amortization (finite horizon)"
+    }
+  },
+  "results": {
+    "deterministic": {
+      "scenarios": {
+        "BASE": "Base",
+        "OPTIMISTIC": "Optimistic",
+        "PESSIMISTIC": "Pessimistic"
+      },
+      "realAnnualAccum": "Real annual (accum)",
+      "yearsToRetirement": "Years to retirement",
+      "targetCapitalReal": "Target capital (today's money)",
+      "targetCapitalNominal": "Target capital (future money)",
+      "fvCurrentAssetsReal": "FV current assets (real)",
+      "fvCurrentAssetsNominal": "FV current assets (nominal)",
+      "requiredFromContributionsReal": "Needed from contributions",
+      "requiredMonthlyContributionReal": "Required monthly saving (real) /mo"
+    },
+    "monteCarlo": {
+      "header": "Monte Carlo Result",
+      "requiredMonthlyContributionReal": "Required monthly saving (real) /mo",
+      "successProbability": "Achieved success probability",
+      "trials": "Trials",
+      "iterations": "Solver iterations",
+      "explanation": "Success = portfolio stays above zero through the retirement horizon while funding your desired net withdrawal (grossed-up for taxes). Returns are drawn monthly from a normal distribution with the specified real annual volatility.",
+      "noResult": "Calculation completed but no result available.",
+      "notCalculated": "Click 'Calculate Monte Carlo' to run the simulation with your current parameters."
+    }
+  }
+}
