@@ -14,7 +14,6 @@ export interface Inputs {
   annualFee: number;
   taxRateOnGains: number;
   taxRateOnWithdrawals: number;
-  contributeAtEnd: boolean;
   calcMode: "Deterministic" | "MonteCarlo";
   retireModel: "WithdrawalRate" | "Amortization";
   mcAnnualVolatility: number;
@@ -32,6 +31,9 @@ export interface ResultDeterministic {
   fvCurrentAssetsNominal: number;
   requiredFromContributionsReal: number;
   requiredMonthlyContributionReal: number;
+  requiredMonthlyContributionNominalYear1: number;
+  requiredMonthlyContributionNominalYear5: number;
+  requiredMonthlyContributionNominalYear10: number;
   note?: string;
 }
 

@@ -63,6 +63,9 @@ export function computeDeterministic(
       fvCurrentAssetsNominal: fvCurrentAssetsNominalAtRetirement,
       requiredFromContributionsReal: 0,
       requiredMonthlyContributionReal: 0,
+      requiredMonthlyContributionNominalYear1: 0,
+      requiredMonthlyContributionNominalYear5: 0,
+      requiredMonthlyContributionNominalYear10: 0,
       note:
         "Under these assumptions, your current assets already meet the target.",
     };
@@ -73,9 +76,15 @@ export function computeDeterministic(
     monthlyContrib = neededFromContrib / months;
   } else {
     let factor = (Math.pow(1 + realMonthly, months) - 1) / realMonthly;
-    if (!inp.contributeAtEnd) factor *= 1 + realMonthly;
+    // Assume contributions at beginning of month (more conservative)
+    factor *= 1 + realMonthly;
     monthlyContrib = neededFromContrib / factor;
   }
+
+  // Calculate nominal amounts for different years (accounting for inflation)
+  const nominalYear1 = monthlyContrib; // Year 1 = real amount
+  const nominalYear5 = monthlyContrib * Math.pow(1 + annualInflation, 4); // 5th year
+  const nominalYear10 = years >= 10 ? monthlyContrib * Math.pow(1 + annualInflation, 9) : 0; // 10th year (if applicable)
 
   return {
     yearsToRetirement: years,
@@ -87,5 +96,8 @@ export function computeDeterministic(
     fvCurrentAssetsNominal: fvCurrentAssetsNominalAtRetirement,
     requiredFromContributionsReal: neededFromContrib,
     requiredMonthlyContributionReal: monthlyContrib,
+    requiredMonthlyContributionNominalYear1: nominalYear1,
+    requiredMonthlyContributionNominalYear5: nominalYear5,
+    requiredMonthlyContributionNominalYear10: nominalYear10,
   };
 }

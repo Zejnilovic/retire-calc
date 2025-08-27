@@ -1,6 +1,6 @@
 import type { CalcMode, RetireModel } from '../../types';
-import { Section, LabeledNumber, LabeledSelect } from '../ui/FormComponents';
-import { Tooltip, InfoIcon } from '../ui/Tooltip';
+import { LabeledNumber, LabeledSelect } from '../ui/FormComponents';
+import { Section } from '../ui/FormComponents';
 import { useTranslation } from 'react-i18next';
 
 interface BasicsFormProps {
@@ -14,8 +14,6 @@ interface BasicsFormProps {
   setRetireModel: (value: RetireModel) => void;
   retirementHorizonYears: number;
   setRetirementHorizonYears: (value: number) => void;
-  contributeAtEnd: boolean;
-  setContributeAtEnd: (value: boolean) => void;
   currentAssets: number;
   setCurrentAssets: (value: number) => void;
   errors?: { [key: string]: string };
@@ -32,8 +30,6 @@ export function BasicsForm({
   setRetireModel,
   retirementHorizonYears,
   setRetirementHorizonYears,
-  contributeAtEnd,
-  setContributeAtEnd,
   currentAssets,
   setCurrentAssets,
   errors = {},
@@ -109,21 +105,6 @@ export function BasicsForm({
             )}
           </div>
         )}
-        
-        <div className="flex items-center gap-2 mt-1">
-          <label className="flex items-center gap-2">
-            <input 
-              type="checkbox" 
-              checked={contributeAtEnd} 
-              onChange={(e) => setContributeAtEnd(e.target.checked)}
-              className="rounded border-gray-300 dark:border-gray-600 text-blue-600 focus:ring-blue-500 dark:focus:ring-blue-400 dark:bg-gray-700"
-            />
-            <span className="text-sm text-gray-700 dark:text-gray-300">{t('labels.contributeAtEnd')}</span>
-          </label>
-          <Tooltip content={t('tooltips.contributeAtEnd')} width="lg">
-            <InfoIcon className="w-3 h-3 text-gray-400 dark:text-gray-500" />
-          </Tooltip>
-        </div>
         
         <div>
           <LabeledNumber 

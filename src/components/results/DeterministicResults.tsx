@@ -83,6 +83,41 @@ export function DeterministicResults({
                 </Tooltip>
                 <span className="whitespace-normal break-words">{fmtMoney(r.requiredMonthlyContributionReal, language, currency)}</span>
               </div>
+              
+              {/* Savings Breakdown Section */}
+              {r.requiredMonthlyContributionReal > 0 && (
+                <div className="mt-4 p-3 bg-blue-50 dark:bg-blue-900/30 rounded-lg border border-blue-200 dark:border-blue-700">
+                  <h4 className="text-sm font-semibold text-blue-800 dark:text-blue-200 mb-2">
+                    {t('results.deterministic.savingsExplanation')}
+                  </h4>
+                  <h5 className="text-xs font-medium text-blue-700 dark:text-blue-300 mb-1">
+                    {t('results.deterministic.realVsNominalTitle')}
+                  </h5>
+                  <p className="text-xs text-blue-600 dark:text-blue-400 mb-2">
+                    {t('results.deterministic.realVsNominalExplanation')}
+                  </p>
+                  <div className="space-y-1 text-xs">
+                    <div className="flex justify-between">
+                      <span className="text-blue-700 dark:text-blue-300">{t('results.deterministic.nominalYear1')}:</span>
+                      <span className="font-medium">{fmtMoney(r.requiredMonthlyContributionNominalYear1, language, currency)}/mo</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-blue-700 dark:text-blue-300">{t('results.deterministic.nominalYear5')}:</span>
+                      <span className="font-medium">{fmtMoney(r.requiredMonthlyContributionNominalYear5, language, currency)}/mo</span>
+                    </div>
+                    {r.requiredMonthlyContributionNominalYear10 > 0 && (
+                      <div className="flex justify-between">
+                        <span className="text-blue-700 dark:text-blue-300">{t('results.deterministic.nominalYear10')}:</span>
+                        <span className="font-medium">{fmtMoney(r.requiredMonthlyContributionNominalYear10, language, currency)}/mo</span>
+                      </div>
+                    )}
+                  </div>
+                  <p className="text-xs text-blue-600 dark:text-blue-400 mt-2 italic">
+                    {t('results.deterministic.savingsNote')}
+                  </p>
+                </div>
+              )}
+              
               {r.note && <p className="text-xs text-green-700 dark:text-green-400 mt-2">{r.note}</p>}
             </div>
           </div>

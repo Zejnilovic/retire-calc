@@ -54,7 +54,6 @@
     "calculationMode": "Režim výpočtu",
     "retirementModel": "Model odchodu do důchodu",
     "retirementHorizonYears": "Horizont důchodu (roky)",
-    "contributeAtEnd": "Přispívat na konci měsíce",
     "currentAssets": "Aktuální aktiva (dnes)",
     "annualInflation": "Roční inflace",
     "nominalAnnualReturn": "Nom. roční výnos (hrubý)",
@@ -77,7 +76,6 @@
     "calcMode": "Deterministické režimy používají pevné sazby; Monte Carlo simuluje mnoho možných výsledků.",
     "retireModel": "Bezpečná míra výběru vs. amortizace na omezený horizont.",
     "retirementHorizonYears": "Odhadovaný počet let v důchodu; používá se ke kontrole vyčerpání prostředků.",
-    "contributeAtEnd": "Zda se příspěvky provádějí na konci nebo na začátku měsíce.",
     "currentAssets": "Celková hodnota vašich úspor a investic na důchod.",
     "annualInflation": "Očekávaná průměrná roční míra inflace.",
     "nominalAnnualReturn": "Očekávaný roční výnos před inflací a poplatky.",
@@ -132,7 +130,14 @@
       "fvCurrentAssetsReal": "Budoucí hodnota aktiv (reálná)",
       "fvCurrentAssetsNominal": "Budoucí hodnota aktiv (nominální)",
       "requiredFromContributionsReal": "Potřeba z příspěvků (reálná)",
-      "requiredMonthlyContributionReal": "Požadované měsíční úspory (reálné)"
+      "requiredMonthlyContributionReal": "Požadované měsíční úspory (reálné)",
+      "savingsExplanation": "Rozpis požadavků na úspory",
+      "realVsNominalTitle": "Reálné vs. nominální částky",
+      "realVsNominalExplanation": "'Reálná' částka zachovává dnešní kupní sílu. K jejímu dosažení musíte každoročně zvyšovat nominální příspěvky o inflaci:",
+      "nominalYear1": "Rok 1 (dnešní dolary)",
+      "nominalYear5": "Rok 5 (upraveno o inflaci)",
+      "nominalYear10": "Rok 10 (upraveno o inflaci)",
+      "savingsNote": "Poznámka: Tyto částky předpokládají, že budete zvyšovat příspěvky s inflací pro zachování stejné kupní síly."
     },
     "monteCarlo": {
       "header": "Výsledek Monte Carlo",

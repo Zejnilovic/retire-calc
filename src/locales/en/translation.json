@@ -54,7 +54,6 @@
     "calculationMode": "Calculation mode",
     "retirementModel": "Retirement model",
     "retirementHorizonYears": "Retirement horizon (years)",
-    "contributeAtEnd": "Contribute at end of month",
     "currentAssets": "Current assets (today)",
     "annualInflation": "Annual inflation",
     "nominalAnnualReturn": "Nominal annual return (gross)",
@@ -77,7 +76,6 @@
     "calcMode": "Deterministic uses fixed rates; Monte Carlo simulates many possible outcomes.",
     "retireModel": "Safe withdrawal rate vs. amortization horizon.",
     "retirementHorizonYears": "Years expected in retirement; used for depletion check.",
-    "contributeAtEnd": "Contributions at end vs. start of month.",
     "currentAssets": "Total value of current retirement savings.",
     "annualInflation": "Expected average annual inflation rate.",
     "nominalAnnualReturn": "Expected pre-inflation investment return.",
@@ -132,7 +130,14 @@
       "fvCurrentAssetsReal": "FV current assets (real)",
       "fvCurrentAssetsNominal": "FV current assets (nominal)",
       "requiredFromContributionsReal": "Needed from contributions",
-      "requiredMonthlyContributionReal": "Required monthly saving (real) /mo"
+      "requiredMonthlyContributionReal": "Required monthly saving (real) /mo",
+      "savingsExplanation": "Savings Requirements Breakdown",
+      "realVsNominalTitle": "Real vs. Nominal Amounts",
+      "realVsNominalExplanation": "The 'real' amount maintains today's purchasing power. To achieve this, you must increase your nominal contributions by inflation each year:",
+      "nominalYear1": "Year 1 (today's dollars)",
+      "nominalYear5": "Year 5 (inflation-adjusted)",
+      "nominalYear10": "Year 10 (inflation-adjusted)",
+      "savingsNote": "Note: These amounts assume you increase your contributions with inflation to maintain the same purchasing power."
     },
     "monteCarlo": {
       "header": "Monte Carlo Result",

@@ -49,7 +49,6 @@ export default function App() {
   const [annualFee, setAnnualFee] = useState(0.006);
   const [taxRateOnGains, setTaxRateOnGains] = useState(0.15);
   const [taxRateOnWithdrawals, setTaxRateOnWithdrawals] = useState(0.1);
-  const [contributeAtEnd, setContributeAtEnd] = useState(true);
 
   // Modes
   const [calcMode, setCalcMode] = useState<CalcMode>("Deterministic");
@@ -121,7 +120,6 @@ export default function App() {
     annualFee,
     taxRateOnGains,
     taxRateOnWithdrawals,
-    contributeAtEnd,
     calcMode,
     retireModel,
     mcAnnualVolatility,
@@ -156,6 +154,9 @@ export default function App() {
         fvCurrentAssetsNominal: 0,
         requiredFromContributionsReal: 0,
         requiredMonthlyContributionReal: 0,
+        requiredMonthlyContributionNominalYear1: 0,
+        requiredMonthlyContributionNominalYear5: 0,
+        requiredMonthlyContributionNominalYear10: 0,
         note: t('errors.invalidInputs')
       };
     }
@@ -174,6 +175,9 @@ export default function App() {
         fvCurrentAssetsNominal: 0,
         requiredFromContributionsReal: 0,
         requiredMonthlyContributionReal: 0,
+        requiredMonthlyContributionNominalYear1: 0,
+        requiredMonthlyContributionNominalYear5: 0,
+        requiredMonthlyContributionNominalYear10: 0,
         note: t('errors.invalidInputs')
       };
     }
@@ -196,6 +200,9 @@ export default function App() {
         fvCurrentAssetsNominal: 0,
         requiredFromContributionsReal: 0,
         requiredMonthlyContributionReal: 0,
+        requiredMonthlyContributionNominalYear1: 0,
+        requiredMonthlyContributionNominalYear5: 0,
+        requiredMonthlyContributionNominalYear10: 0,
         note: t('errors.invalidInputs')
       };
     }
@@ -266,8 +273,6 @@ export default function App() {
             setRetireModel={setRetireModel}
             retirementHorizonYears={retirementHorizonYears}
             setRetirementHorizonYears={setRetirementHorizonYears}
-            contributeAtEnd={contributeAtEnd}
-            setContributeAtEnd={setContributeAtEnd}
             currentAssets={currentAssets}
             setCurrentAssets={setCurrentAssets}
             errors={errors}

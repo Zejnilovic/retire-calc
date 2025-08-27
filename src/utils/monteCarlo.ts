@@ -23,8 +23,8 @@ export function simulateOnce(
 
   for (let m = 0; m < monthsAccum; m++) {
     const r = muM + sigmaM * randn();
-    bal *= 1 + r;
-    if (inp.contributeAtEnd) bal += monthlyContrib; else bal = (bal + monthlyContrib) * (1 + r);
+    // Assume contributions at beginning of month (more conservative)
+    bal = (bal + monthlyContrib) * (1 + r);
     if (!isFinite(bal)) return false;
   }
 
