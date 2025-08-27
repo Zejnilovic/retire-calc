@@ -129,28 +129,82 @@ export default function App() {
     mcTargetSuccess,
   };
 
-  const detBase = useMemo(() =>
-    computeDeterministic(inputs, nominalAnnualReturn, annualInflation),
-    [inputs, nominalAnnualReturn, annualInflation]
-  );
+  // Helper function to check if inputs are valid for calculation
+  const isValidForCalculation = () => {
+    return (
+      currentAge >= 0 &&
+      retirementAge > currentAge &&
+      currentAssets >= 0 &&
+      targetMonthlyWithdrawalToday >= 0 &&
+      annualFee >= 0 && annualFee <= 1 &&
+      taxRateOnGains >= 0 && taxRateOnGains <= 1 &&
+      taxRateOnWithdrawals >= 0 && taxRateOnWithdrawals <= 1 &&
+      (retireModel !== "WithdrawalRate" || (maxAnnualWithdrawalRate >= 0.001 && maxAnnualWithdrawalRate <= 0.2)) &&
+      (retireModel !== "Amortization" || retirementHorizonYears >= 1)
+    );
+  };
 
-  const detOptimistic = useMemo(() =>
-    computeDeterministic(
+  const detBase = useMemo(() => {
+    if (!isValidForCalculation()) {
+      return {
+        yearsToRetirement: 0,
+        realReturnAnnual_Accum: 0,
+        realReturnMonthly_Accum: 0,
+        targetCapitalReal: 0,
+        targetCapitalNominal: 0,
+        fvCurrentAssetsReal: 0,
+        fvCurrentAssetsNominal: 0,
+        requiredFromContributionsReal: 0,
+        requiredMonthlyContributionReal: 0,
+        note: "Please enter valid inputs to see calculations."
+      };
+    }
+    return computeDeterministic(inputs, nominalAnnualReturn, annualInflation);
+  }, [inputs, nominalAnnualReturn, annualInflation, currentAge, retirementAge, currentAssets, targetMonthlyWithdrawalToday, annualFee, taxRateOnGains, taxRateOnWithdrawals, maxAnnualWithdrawalRate, retirementHorizonYears, retireModel]);
+
+  const detOptimistic = useMemo(() => {
+    if (!isValidForCalculation()) {
+      return {
+        yearsToRetirement: 0,
+        realReturnAnnual_Accum: 0,
+        realReturnMonthly_Accum: 0,
+        targetCapitalReal: 0,
+        targetCapitalNominal: 0,
+        fvCurrentAssetsReal: 0,
+        fvCurrentAssetsNominal: 0,
+        requiredFromContributionsReal: 0,
+        requiredMonthlyContributionReal: 0,
+        note: "Please enter valid inputs to see calculations."
+      };
+    }
+    return computeDeterministic(
       inputs,
       nominalAnnualReturn + optimisticReturnDelta,
       Math.max(0, annualInflation + optimisticInflationDelta)
-    ),
-    [inputs, nominalAnnualReturn, optimisticReturnDelta, annualInflation, optimisticInflationDelta]
-  );
+    );
+  }, [inputs, nominalAnnualReturn, optimisticReturnDelta, annualInflation, optimisticInflationDelta, currentAge, retirementAge, currentAssets, targetMonthlyWithdrawalToday, annualFee, taxRateOnGains, taxRateOnWithdrawals, maxAnnualWithdrawalRate, retirementHorizonYears, retireModel]);
 
-  const detPessimistic = useMemo(() =>
-    computeDeterministic(
+  const detPessimistic = useMemo(() => {
+    if (!isValidForCalculation()) {
+      return {
+        yearsToRetirement: 0,
+        realReturnAnnual_Accum: 0,
+        realReturnMonthly_Accum: 0,
+        targetCapitalReal: 0,
+        targetCapitalNominal: 0,
+        fvCurrentAssetsReal: 0,
+        fvCurrentAssetsNominal: 0,
+        requiredFromContributionsReal: 0,
+        requiredMonthlyContributionReal: 0,
+        note: "Please enter valid inputs to see calculations."
+      };
+    }
+    return computeDeterministic(
       inputs,
       Math.max(-0.99, nominalAnnualReturn + pessimisticReturnDelta),
       annualInflation + pessimisticInflationDelta
-    ),
-    [inputs, nominalAnnualReturn, pessimisticReturnDelta, annualInflation, pessimisticInflationDelta]
-  );
+    );
+  }, [inputs, nominalAnnualReturn, pessimisticReturnDelta, annualInflation, pessimisticInflationDelta, currentAge, retirementAge, currentAssets, targetMonthlyWithdrawalToday, annualFee, taxRateOnGains, taxRateOnWithdrawals, maxAnnualWithdrawalRate, retirementHorizonYears, retireModel]);
 
   // Mark Monte Carlo results stale when inputs change after initial calculation
   useEffect(() => {
