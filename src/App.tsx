@@ -301,8 +301,18 @@ export default function App() {
           </div>
         )}
 
-        <footer className="mt-10 text-center text-xs text-gray-500 dark:text-gray-400">
+        <footer className="mt-10 text-center text-xs text-gray-500 dark:text-gray-400 space-y-2">
           <p>{t('wisdom')}</p>
+          <p>
+            <a 
+              href="https://github.com/Zejnilovic/retire-calc" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-gray-700 dark:hover:text-gray-300 underline"
+            >
+              {t('viewOnGitHub')}
+            </a>
+          </p>
         </footer>
       </div>
     </div>

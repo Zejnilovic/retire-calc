@@ -2,6 +2,7 @@
   "appTitle": "Kalkulačka úspor na důchod",
   "description": "V reálných hodnotách (dnešní peníze). Zahrnuje poplatky, daně z výnosů a daně z výběrů.",
   "wisdom": "Vyrobeno s ❤️ pro nadšence osobních financí. Nejedná se o finanční poradenství.",
+  "viewOnGitHub": "Zobrazit na GitHubu",
   "calculateMC": "Vypočítat Monte Carlo",
   "calculating": "Probíhá výpočet...",
   "inputsChangedWarning": "Vstupy se změnily. Klikněte na {{button}} pro aktualizaci výsledků.",

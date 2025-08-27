@@ -2,6 +2,7 @@
   "appTitle": "Retirement Saving Calculator",
   "description": "Real terms (today's money). Includes fees, taxes on gains, and taxes on withdrawals.",
   "wisdom": "Made with ❤️ for personal finance nerds. No financial advice.",
+  "viewOnGitHub": "View on GitHub",
   "calculateMC": "Calculate Monte Carlo",
   "calculating": "Calculating...",
   "inputsChangedWarning": "Inputs changed. Click {{button}} to update results.",
