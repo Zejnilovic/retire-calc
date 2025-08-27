@@ -99,16 +99,16 @@ export function DeterministicResults({
                   <div className="space-y-1 text-xs">
                     <div className="flex justify-between">
                       <span className="text-blue-700 dark:text-blue-300">{t('results.deterministic.nominalYear1')}:</span>
-                      <span className="font-medium">{fmtMoney(r.requiredMonthlyContributionNominalYear1, language, currency)}/mo</span>
+                      <span className="font-medium">{fmtMoney(r.requiredMonthlyContributionNominalYear1, language, currency)}/{t('month')}</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-blue-700 dark:text-blue-300">{t('results.deterministic.nominalYear5')}:</span>
-                      <span className="font-medium">{fmtMoney(r.requiredMonthlyContributionNominalYear5, language, currency)}/mo</span>
+                      <span className="font-medium">{fmtMoney(r.requiredMonthlyContributionNominalYear5, language, currency)}/{t('month')}</span>
                     </div>
                     {r.requiredMonthlyContributionNominalYear10 > 0 && (
                       <div className="flex justify-between">
                         <span className="text-blue-700 dark:text-blue-300">{t('results.deterministic.nominalYear10')}:</span>
-                        <span className="font-medium">{fmtMoney(r.requiredMonthlyContributionNominalYear10, language, currency)}/mo</span>
+                        <span className="font-medium">{fmtMoney(r.requiredMonthlyContributionNominalYear10, language, currency)}/{t('month')}</span>
                       </div>
                     )}
                   </div>

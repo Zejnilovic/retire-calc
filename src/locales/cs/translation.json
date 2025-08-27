@@ -134,14 +134,14 @@
       "savingsExplanation": "Rozpis požadavků na úspory",
       "realVsNominalTitle": "Reálné vs. nominální částky",
       "realVsNominalExplanation": "'Reálná' částka zachovává dnešní kupní sílu. K jejímu dosažení musíte každoročně zvyšovat nominální příspěvky o inflaci:",
-      "nominalYear1": "Rok 1 (dnešní dolary)",
+      "nominalYear1": "Rok 1 (dnešní peníze)",
       "nominalYear5": "Rok 5 (upraveno o inflaci)",
       "nominalYear10": "Rok 10 (upraveno o inflaci)",
       "savingsNote": "Poznámka: Tyto částky předpokládají, že budete zvyšovat příspěvky s inflací pro zachování stejné kupní síly."
     },
     "monteCarlo": {
       "header": "Výsledek Monte Carlo",
-      "requiredMonthlyContributionReal": "Požadovaná měsíční úspora (reálná) /mo",
+      "requiredMonthlyContributionReal": "Požadovaná měsíční úspora (reálná)",
       "successProbability": "Dosažená pravděpodobnost úspěchu",
       "trials": "Pokusy",
       "iterations": "Počet iterací řešiče",

@@ -33,7 +33,7 @@ export function FeesAndNeedsForm({
 }: FeesAndNeedsFormProps) {
   const { t } = useTranslation();
   return (
-    <Section title="Fees, Taxes & Needs">
+    <Section title={t('section.feesAndNeeds')}>
       <div className="grid gap-3">
         <div>
           <LabeledNumber 
