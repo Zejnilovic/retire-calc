@@ -93,15 +93,15 @@ export default function App() {
   // Input validation
   useEffect(() => {
     const newErrors: { [key: string]: string } = {};
-    if (currentAge < 0) newErrors.currentAge = "Current age must be 0 or greater.";
-    if (retirementAge <= currentAge) newErrors.retirementAge = "Retirement age must be greater than current age.";
-    if (retireModel === "Amortization" && retirementHorizonYears < 1) newErrors.retirementHorizonYears = "Retirement horizon must be at least 1 year.";
-    if (currentAssets < 0) newErrors.currentAssets = "Current assets must be 0 or greater.";
-    if (retireModel === "WithdrawalRate" && (maxAnnualWithdrawalRate < 0.001 || maxAnnualWithdrawalRate > 0.2)) newErrors.maxAnnualWithdrawalRate = "Withdrawal rate must be between 0.1% and 20%.";
-    if (targetMonthlyWithdrawalToday < 0) newErrors.targetMonthlyWithdrawalToday = "Monthly withdrawal must be 0 or greater.";
-    if (annualFee < 0 || annualFee > 1) newErrors.annualFee = "Annual fee must be between 0% and 100%.";
-    if (taxRateOnGains < 0 || taxRateOnGains > 1) newErrors.taxRateOnGains = "Tax on gains must be between 0% and 100%.";
-    if (taxRateOnWithdrawals < 0 || taxRateOnWithdrawals > 1) newErrors.taxRateOnWithdrawals = "Tax on withdrawals must be between 0% and 100%.";
+    if (currentAge < 0) newErrors.currentAge = t('errors.currentAge');
+    if (retirementAge <= currentAge) newErrors.retirementAge = t('errors.retirementAge');
+    if (retireModel === "Amortization" && retirementHorizonYears < 1) newErrors.retirementHorizonYears = t('errors.retirementHorizon');
+    if (currentAssets < 0) newErrors.currentAssets = t('errors.currentAssets');
+    if (retireModel === "WithdrawalRate" && (maxAnnualWithdrawalRate < 0.001 || maxAnnualWithdrawalRate > 0.2)) newErrors.maxAnnualWithdrawalRate = t('errors.withdrawalRate');
+    if (targetMonthlyWithdrawalToday < 0) newErrors.targetMonthlyWithdrawalToday = t('errors.monthlyWithdrawal');
+    if (annualFee < 0 || annualFee > 1) newErrors.annualFee = t('errors.annualFee');
+    if (taxRateOnGains < 0 || taxRateOnGains > 1) newErrors.taxRateOnGains = t('errors.taxOnGains');
+    if (taxRateOnWithdrawals < 0 || taxRateOnWithdrawals > 1) newErrors.taxRateOnWithdrawals = t('errors.taxOnWithdrawals');
     setErrors(newErrors);
   }, [currentAge, retirementAge, retireModel, retirementHorizonYears, currentAssets, maxAnnualWithdrawalRate, targetMonthlyWithdrawalToday, annualFee, taxRateOnGains, taxRateOnWithdrawals]);
 
@@ -156,7 +156,7 @@ export default function App() {
         fvCurrentAssetsNominal: 0,
         requiredFromContributionsReal: 0,
         requiredMonthlyContributionReal: 0,
-        note: "Please enter valid inputs to see calculations."
+        note: t('errors.invalidInputs')
       };
     }
     return computeDeterministic(inputs, nominalAnnualReturn, annualInflation);
@@ -174,7 +174,7 @@ export default function App() {
         fvCurrentAssetsNominal: 0,
         requiredFromContributionsReal: 0,
         requiredMonthlyContributionReal: 0,
-        note: "Please enter valid inputs to see calculations."
+        note: t('errors.invalidInputs')
       };
     }
     return computeDeterministic(
@@ -196,7 +196,7 @@ export default function App() {
         fvCurrentAssetsNominal: 0,
         requiredFromContributionsReal: 0,
         requiredMonthlyContributionReal: 0,
-        note: "Please enter valid inputs to see calculations."
+        note: t('errors.invalidInputs')
       };
     }
     return computeDeterministic(

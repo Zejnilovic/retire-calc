@@ -10,6 +10,18 @@
   "months": "měsíce",
   "percentage": "%",
   "currency": "{{amount, currency}}",
+  "errors": {
+    "currentAge": "Aktuální věk musí být 0 nebo vyšší.",
+    "retirementAge": "Věk odchodu do důchodu musí být vyšší než současný věk.",
+    "retirementHorizonYears": "Horizont důchodu musí být nejméně 1 rok.",
+    "currentAssets": "Současná aktiva musí být 0 nebo vyšší.",
+    "maxAnnualWithdrawalRate": "Míra výběru musí být mezi 0,1 % a 20 %.",
+    "targetMonthlyWithdrawalToday": "Měsíční výběr musí být 0 nebo vyšší.",
+    "annualFee": "Roční poplatek musí být mezi 0 % a 100 %.",
+    "taxRateOnGains": "Daň z výnosů musí být mezi 0 % a 100 %.",
+    "taxRateOnWithdrawals": "Daň z výběrů musí být mezi 0 % a 100 %.",
+    "invalidInputs": "Zadejte platné vstupy pro zobrazení výpočtů."
+  },
   "section": {
     "basics": "Základní informace",
     "economyAndReturns": "Ekonomika & výnosy",

@@ -10,6 +10,18 @@
   "months": "months",
   "percentage": "%",
   "currency": "{{amount, currency}}",
+  "errors": {
+    "currentAge": "Current age must be 0 or greater.",
+    "retirementAge": "Retirement age must be greater than current age.",
+    "retirementHorizonYears": "Retirement horizon must be at least 1 year.",
+    "currentAssets": "Current assets must be 0 or greater.",
+    "maxAnnualWithdrawalRate": "Withdrawal rate must be between 0.1% and 20%.",
+    "targetMonthlyWithdrawalToday": "Monthly withdrawal must be 0 or greater.",
+    "annualFee": "Annual fee must be between 0% and 100%.",
+    "taxRateOnGains": "Tax on gains must be between 0% and 100%.",
+    "taxRateOnWithdrawals": "Tax on withdrawals must be between 0% and 100%.",
+    "invalidInputs": "Please enter valid inputs to see calculations."
+  },
   "section": {
     "basics": "Basics",
     "economyAndReturns": "Economy & Returns",
